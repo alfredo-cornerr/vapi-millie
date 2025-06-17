@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Millie - Vapi Agent</title>
+    <script>
+      const assistant = "3c9678f4-d9dd-4257-95ca-cc3f9fa3c88a";
+      const apiKey = "b0434bd0-8058-43ee-a9fd-72b70066b1b6";
+      window.addEventListener("DOMContentLoaded", () => {
+        const script = document.createElement("script");
+        script.src = "https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/assets/index.js";
+        script.defer = true;
+        script.async = true;
+        script.onload = () => {
+          window.vapiSDK.run({
+            apiKey,
+            assistant
+          });
+        };
+        document.body.appendChild(script);
+      });
+    </script>
+  </head>
+  <body style="margin: 0; padding: 0; overflow: hidden;"></body>
+</html>
